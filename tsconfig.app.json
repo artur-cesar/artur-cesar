@@ -1,0 +1,33 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // configurações gerais para seu "frontend":
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+
+    // → IMPORTANTE: faz o TS reconhecer @/… como src/… 
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    // → tipagens que o código em src/ vai precisar:
+    "types": [
+      "vite/client"   // para que TS entenda import.meta.env e import.meta.url
+    ]
+  },
+  // tudo dentro de src/ entra no projeto
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

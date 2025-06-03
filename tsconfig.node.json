@@ -1,0 +1,27 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // → permite que TS entenda os módulos nativos do Node, como path, url, import.meta.url, etc
+    "target": "ESNext",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+
+    "types": [
+      "node",        // permite usar path, url, process, __dirname, etc
+      "vite/client",  // também precisa das tipagens do Vite se usar import.meta.url
+    ]
+  },
+  // vamos “incluir” apenas o vite.config.ts para ser checado como código Node/ESM
+  "include": [
+    "vite.config.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
