@@ -1,4 +1,5 @@
 import { ref } from 'vue';
+import BtnDropdown from './BtnDropdown.vue';
 const socials = ref([
     {
         name: 'LinkedIn',
@@ -49,10 +50,14 @@ for (const [social] of __VLS_getVForSourceType((__VLS_ctx.socials))) {
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
     ...{ class: "mt-6 flex flex-wrap gap-4 justify-center" },
 });
-__VLS_asFunctionalElement(__VLS_intrinsicElements.a, __VLS_intrinsicElements.a)({
-    href: "tel:+5582996177917",
-    ...{ class: "bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded" },
-});
+/** @type {[typeof BtnDropdown, ]} */ ;
+// @ts-ignore
+const __VLS_0 = __VLS_asFunctionalComponent(BtnDropdown, new BtnDropdown({
+    label: ('Contact'),
+}));
+const __VLS_1 = __VLS_0({
+    label: ('Contact'),
+}, ...__VLS_functionalComponentArgsRest(__VLS_0));
 __VLS_asFunctionalElement(__VLS_intrinsicElements.a, __VLS_intrinsicElements.a)({
     href: "/Currículo_EN_2024.docx",
     target: "_blank",
@@ -115,12 +120,6 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.li, __VLS_intrinsicElements.li
 /** @type {__VLS_StyleScopedClasses['flex-wrap']} */ ;
 /** @type {__VLS_StyleScopedClasses['gap-4']} */ ;
 /** @type {__VLS_StyleScopedClasses['justify-center']} */ ;
-/** @type {__VLS_StyleScopedClasses['bg-blue-500']} */ ;
-/** @type {__VLS_StyleScopedClasses['hover:bg-blue-600']} */ ;
-/** @type {__VLS_StyleScopedClasses['text-white']} */ ;
-/** @type {__VLS_StyleScopedClasses['py-2']} */ ;
-/** @type {__VLS_StyleScopedClasses['px-4']} */ ;
-/** @type {__VLS_StyleScopedClasses['rounded']} */ ;
 /** @type {__VLS_StyleScopedClasses['bg-gray-300']} */ ;
 /** @type {__VLS_StyleScopedClasses['hover:bg-gray-400']} */ ;
 /** @type {__VLS_StyleScopedClasses['text-gray-700']} */ ;
@@ -151,6 +150,7 @@ var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {
         return {
+            BtnDropdown: BtnDropdown,
             socials: socials,
         };
     },

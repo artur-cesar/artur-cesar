@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import BtnDropdown from './BtnDropdown.vue';
 
 const socials = ref([
     {
@@ -29,7 +30,7 @@ const socials = ref([
                 </a>
             </div>
             <div class="mt-6 flex flex-wrap gap-4 justify-center">
-                <a href="tel:+5582996177917" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Contact</a>
+                <BtnDropdown :label="'Contact'"/>
                 <a href="/Currículo_EN_2024.docx" target="_blank" rel="noopener noreferrer" class="bg-gray-300 hover:bg-gray-400 text-gray-700 py-2 px-4 rounded">Resume</a>
             </div>
         </div>
