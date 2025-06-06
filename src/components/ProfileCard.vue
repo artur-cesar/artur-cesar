@@ -5,7 +5,7 @@ import BtnDropdown from './BtnDropdown.vue';
 const socials = ref([
     {
         name: 'LinkedIn',
-        url: 'www.linkedin.com/in/artur-cesar-de-melo-jacinto',
+        url: 'https://www.linkedin.com/in/artur-cesar-de-melo-jacinto',
         icon: 'linkedin'
     },
     {
