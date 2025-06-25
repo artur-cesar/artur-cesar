@@ -5,7 +5,6 @@ const props = defineProps({
         default: 'Dropdown'
     }
 });
-console.log(props);
 const isOpen = ref(false);
 const dropdownRef = ref(null);
 const toggleDropdown = () => {

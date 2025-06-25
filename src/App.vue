@@ -2,6 +2,8 @@
 import ResumeContent from './components/ResumeContent.vue'
 import ProfileCard from './components/ProfileCard.vue'
 import PostsCard from './components/PostsCard.vue'
+import RepoCard from './components/RepoCard.vue'
+
 </script>
 
 <template>
@@ -10,6 +12,9 @@ import PostsCard from './components/PostsCard.vue'
         <div class="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
             <div class="col-span-4 sm:col-span-3">
                 <ProfileCard />
+                <Suspense>
+                  <RepoCard />
+                </Suspense>
                 <PostsCard />
             </div>
             <div class="col-span-4 sm:col-span-9">
@@ -19,6 +24,3 @@ import PostsCard from './components/PostsCard.vue'
     </div>
   </div>
 </template>
-
-<style scoped>
-</style>

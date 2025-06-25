@@ -49,7 +49,6 @@ const props = defineProps({
     }
 });
 
-console.log(props)
 const isOpen = ref(false);
 const dropdownRef = ref<HTMLElement | null>(null);
 

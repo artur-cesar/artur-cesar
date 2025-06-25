@@ -8,12 +8,14 @@ let __VLS_directives;
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
     ...{ class: "bg-white shadow rounded-lg p-6 my-5" },
 });
-__VLS_asFunctionalElement(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({
+    ...{ class: "text-gray-700 uppercase font-bold tracking-wider mb-2" },
+});
 for (const [post, index] of __VLS_getVForSourceType((__VLS_ctx.posts))) {
     __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
         ...{ class: "my-5 max-w-sm bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden hover:scale-105 transition-transform" },
+        key: (index),
     });
-    __VLS_asFunctionalDirective(__VLS_directives.vKey)(null, { ...__VLS_directiveBindingRestFields, value: (index) }, null, null);
     __VLS_asFunctionalElement(__VLS_intrinsicElements.a, __VLS_intrinsicElements.a)({
         href: (post.url),
         target: "_blank",
@@ -40,6 +42,11 @@ for (const [post, index] of __VLS_getVForSourceType((__VLS_ctx.posts))) {
 /** @type {__VLS_StyleScopedClasses['rounded-lg']} */ ;
 /** @type {__VLS_StyleScopedClasses['p-6']} */ ;
 /** @type {__VLS_StyleScopedClasses['my-5']} */ ;
+/** @type {__VLS_StyleScopedClasses['text-gray-700']} */ ;
+/** @type {__VLS_StyleScopedClasses['uppercase']} */ ;
+/** @type {__VLS_StyleScopedClasses['font-bold']} */ ;
+/** @type {__VLS_StyleScopedClasses['tracking-wider']} */ ;
+/** @type {__VLS_StyleScopedClasses['mb-2']} */ ;
 /** @type {__VLS_StyleScopedClasses['my-5']} */ ;
 /** @type {__VLS_StyleScopedClasses['max-w-sm']} */ ;
 /** @type {__VLS_StyleScopedClasses['bg-white']} */ ;

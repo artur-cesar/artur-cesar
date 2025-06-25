@@ -160,4 +160,21 @@ export class Service {
             }
         ];
     }
+    async getRepos() {
+        const response = await fetch("https://api.github.com/users/artur-cesar/repos");
+        const repos = await response.json();
+        return repos.map((repo) => {
+            return {
+                id: repo.id,
+                name: repo.name,
+                full_name: repo.full_name,
+                private: repo.private,
+                html_url: repo.html_url,
+                description: repo.description,
+                language: repo.language,
+                stargazers_count: repo.stargazers_count,
+                updated_at: repo.updated_at
+            };
+        });
+    }
 }
